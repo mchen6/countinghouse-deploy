@@ -4,12 +4,16 @@ How a hosted countinghouse instance is deployed, backed up and watched:
 the gateway ([countinghouse](https://github.com/mchen6/countinghouse)),
 the registry ([countinghouse-registry](https://github.com/mchen6/countinghouse-registry))
 and Redis, as one unit an operator can stand up, upgrade and restore.
+The same files serve whoever runs the instance: the maintainers for a
+pilot, or an operator in their own environment, unchanged.
 
 Status: scope only (2026-11-10). Nothing here runs yet.
 
 ## Scope
 
-- **Compose** for a single host, and a **Helm chart** for Kubernetes,
+- **A one-command Compose install** for a single host, with a guide
+  that gets from nothing to a first tool call in fifteen minutes, and
+  later a **Helm chart** for Kubernetes,
   following the posture in countinghouse's `docs/deployment.md` and the
   Kubernetes mapping in its multi-language modules note.
 - **Backups and restore**: the registry's sqlite file through Litestream,
